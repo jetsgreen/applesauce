@@ -7,11 +7,9 @@
 body{
     margin: 10px;
     margin-left: 10px;
-    /* background-color: lightseagreen; */  
-    background-image: url(/assets/images/wallpaper.jpg);
+    /* background-color: lightseagreen;   */
+    background-image: url("https://cdn.shopify.com/s/files/1/0901/0816/products/Explosive_Morning_Desktop_1_2048x.JPG?v=1500996502");
     background-size: cover;
-
-    
     
 }
 
@@ -41,8 +39,7 @@ body{
 .choice {
     display: inline-block;
     margin-top: 10px;
-    
-    
+
 }
 
 h4 {

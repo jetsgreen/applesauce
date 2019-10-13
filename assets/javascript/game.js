@@ -8,16 +8,117 @@
 // 4 Create a function that adds the points as you click the 
 // crystals to try to guess the random number
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+  var randomNumber = Math.floor(Math.random() * 101 + 19);
+  $("#random").html(randomNumber);
 
 
-    var red = 0;
-    var blue = 0;
-    var yellow = 0;
-    var purple = 0;
-    
-    $( "#red" ).click(function() {
-        alert( "its working" );
-      });
+  var red = Math.floor(Math.random() * 12);
+  $("#total").html(red);
+
+  var blue = Math.floor(Math.random() * 12);
+  $("#total").html(blue);
+
+  var yellow = Math.floor(Math.random() * 12);
+  $("#total").html(yellow);
+
+  var purple = Math.floor(Math.random() * 12);
+  $("#total").html(purple);
+
+
+
+  var wins = 0;
+  var loses = 0;
+  var total = 0;
+  $("#total").text(total);
+
+
+
+  $("#red").click(function () {
+    total = total + red;
+    $("#total").text(total);
+    if (total === randomNumber) {
+      wins++;
+      $("#wins").html("wins: " + wins);
+      reset();
+      resetTwo();
+
+    }
+    else if (total > randomNumber) {
+      loses++;
+      $("#loses").html("loses: " + loses);
+      reset();
+      resetTwo();
+    }
+  });
+  $("#blue").click(function () {
+    total = total + blue;
+    $("#total").text(total);
+    if (total === randomNumber) {
+      wins++;
+      $("#wins").html("wins: " + wins);
+      reset();
+      resetTwo();
+
+    }
+    else if (total > randomNumber) {
+      loses++;
+      $("#loses").html("loses: " + loses);
+      reset();
+      resetTwo();
+    }
+  });
+
+  $("#yellow").click(function () {
+    total = total + yellow;
+    $("#total").text(total);
+    if (total === randomNumber) {
+      wins++;
+      $("#wins").html("wins: " + wins);
+      reset();
+      resetTwo();
+    }
+    else if (total > randomNumber) {
+      loses++;
+      $("#loses").html("loses: " + loses);
+      reset();
+      resetTwo();
+    }
+
+  });
+
+  $("#purple").click(function () {
+    total = total + purple;
+    $("#total").text(total);
+    if (total === randomNumber) {
+      wins++;
+      $("#wins").html("wins: " + wins);
+      reset();
+      resetTwo();
+    }
+    else if (total > randomNumber) {
+      loses++;
+      $("#loses").html("loses: " + loses);
+      reset();
+      resetTwo();
+    }
+
+  });
+
+  function reset() {
+    total = 0;
+    $("#total").text(total);
+  }
+
+  function resetTwo() {
+    randomNumber = Math.floor(Math.random() * 101 + 19);
+    $("#random-number").text(randomNumber);
+    red = Math.floor(Math.random() * 12);
+    blue = Math.floor(Math.random() * 12);
+    yellow = Math.floor(Math.random() * 12);
+    purple = Math.floor(Math.random() * 12);
+  }
 
 });
+
