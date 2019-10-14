@@ -14,7 +14,6 @@ $(document).ready(function () {
   var randomNumber = Math.floor(Math.random() * 101) + 19;
   $("#random").html(randomNumber);
 
-
   var red = Math.floor(Math.random() * 12);
   $("#total").html(red);
 
@@ -27,14 +26,10 @@ $(document).ready(function () {
   var purple = Math.floor(Math.random() * 12);
   $("#total").html(purple);
 
-
-
   var wins = 0;
   var loses = 0;
   var total = 0;
   $("#total").text(total);
-
-
 
   $("#red").click(function () {
     total = total + red;
@@ -106,6 +101,7 @@ $(document).ready(function () {
     }
 
   });
+ 
 
   function reset() {
     total = 0;
