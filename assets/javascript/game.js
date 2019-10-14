@@ -10,7 +10,8 @@
 
 $(document).ready(function () {
 
-  var randomNumber = Math.floor(Math.random() * 101 + 19);
+  // var randomNumber = Math.floor(Math.random() * 101 + 19);
+  var randomNumber = Math.floor(Math.random() * 101) + 19;
   $("#random").html(randomNumber);
 
 
@@ -112,12 +113,12 @@ $(document).ready(function () {
   }
 
   function resetTwo() {
-    randomNumber = Math.floor(Math.random() * 101 + 19);
+    var randomNumber = Math.floor(Math.random() * 101) + 19;
     $("#random-number").text(randomNumber);
-    red = Math.floor(Math.random() * 12);
-    blue = Math.floor(Math.random() * 12);
-    yellow = Math.floor(Math.random() * 12);
-    purple = Math.floor(Math.random() * 12);
+    red = Math.floor(Math.random() * 11)  + 1;
+    blue = Math.floor(Math.random() * 11) + 1;
+    yellow = Math.floor(Math.random() * 11) + 1;
+    purple = Math.floor(Math.random() * 11)+ 1;
   }
 
 });
