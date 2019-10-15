@@ -109,8 +109,8 @@ $(document).ready(function () {
   }
 
   function resetTwo() {
-    var randomNumber = Math.floor(Math.random() * 101) + 19;
-    $("#random-number").text(randomNumber);
+    randomNumber = Math.floor(Math.random() * 101) + 19;
+    $("#random").text(randomNumber);
     red = Math.floor(Math.random() * 11)  + 1;
     blue = Math.floor(Math.random() * 11) + 1;
     yellow = Math.floor(Math.random() * 11) + 1;
